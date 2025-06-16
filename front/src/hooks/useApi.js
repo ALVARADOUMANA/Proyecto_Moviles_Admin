@@ -92,6 +92,17 @@ export const crearPerson = (data) => api.post('/api/Person', data);
 export const actualizarPerson = (data) => api.put('/api/Person', data);
 export const eliminarPerson = (id) => api.delete(`/api/Person/${id}`);
 
+
+export const SignUpCode = () => api.post('api/SignUp/OTP');
+
+export const insertarPaciente = () => api.post('api/Paciente/Insertar');
+export const insertarMedico = () => api.post('api/Medico/CrearMedico');
+
+export const ObtenerPacientes = () => api.get('api/Paciente/ObtenerPacientes');
+export const ObtenerMedicos = () => api.get('api/Medico/ObtenerMedicos');
+
+
+
 // Función helper para verificar si el usuario está autenticado antes de hacer peticiones
 export const isUserAuthenticated = () => {
   const token = localStorage.getItem('token');

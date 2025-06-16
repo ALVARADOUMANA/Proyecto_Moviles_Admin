@@ -13,6 +13,8 @@ import TablaPersons from './pages/TablaPersons';
 import Login from './pages/auth/Login';
 import { Container } from 'reactstrap';
 import { isAuthenticated } from './hooks/useAuth';
+import TablaUsuarios from './pages/TablaUsuarios';
+
 
 // Componente interno que maneja las rutas y tiene acceso a useLocation
 const AppContent = () => {
@@ -154,6 +156,15 @@ const AppContent = () => {
         element={
           <ProtectedRouteWithLayout>
             <TablaPersons />
+          </ProtectedRouteWithLayout>
+        }
+      />
+
+      <Route
+        path="/tabla_usuarios"
+        element={
+          <ProtectedRouteWithLayout>
+            <TablaUsuarios />
           </ProtectedRouteWithLayout>
         }
       />
