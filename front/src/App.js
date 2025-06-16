@@ -6,10 +6,6 @@ import MyNavbar from './components/Navbar';
 import BreadcrumbContent from './components/BreadcrumbContent';
 import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './pages/HomePage';
-import NuevoDepartment from './pages/NuevoDepartment';
-import TablaDepartments from './pages/TablaDepartments';
-import NuevoPerson from './pages/NuevoPerson';
-import TablaPersons from './pages/TablaPersons';
 import Login from './pages/auth/Login';
 import { Container } from 'reactstrap';
 import { isAuthenticated } from './hooks/useAuth';
@@ -126,43 +122,7 @@ const AppContent = () => {
       />
 
       <Route
-        path="/crear_department"
-        element={
-          <ProtectedRouteWithLayout>
-            <NuevoDepartment />
-          </ProtectedRouteWithLayout>
-        }
-      />
-
-      <Route
-        path="/tabla_departments"
-        element={
-          <ProtectedRouteWithLayout>
-            <TablaDepartments />
-          </ProtectedRouteWithLayout>
-        }
-      />
-
-      <Route
-        path="/crear_person"
-        element={
-          <ProtectedRouteWithLayout>
-            <NuevoPerson />
-          </ProtectedRouteWithLayout>
-        }
-      />
-
-      <Route
-        path="/tabla_persons"
-        element={
-          <ProtectedRouteWithLayout>
-            <TablaPersons />
-          </ProtectedRouteWithLayout>
-        }
-      />
-
-      <Route
-        path="/tabla_usuarios"
+        path="/usuarios"
         element={
           <ProtectedRouteWithLayout>
             <TablaUsuarios />
@@ -171,7 +131,7 @@ const AppContent = () => {
       />
 
       <Route
-        path="/crear_usuario"
+        path="/usuarios/crear"
         element={
           <ProtectedRouteWithLayout>
             <CrearUsuario />

@@ -13,7 +13,8 @@ import {
   FileText,
   BookOpen,
   ChevronLeft,
-  LogOut
+  LogOut,
+  User
 } from 'react-feather';
 import { logout } from '../hooks/useAuth';
 
@@ -40,12 +41,8 @@ const Sidebar = ({ onToggle }) => {
   
   const navItems = [
     { path: '/', icon: <Home size={18} />, label: 'Home' },
-    { path: '/crear_department', icon: <FileText size={18} />, label: 'New Department' },
-    { path: '/tabla_departments', icon: <BookOpen size={18} />, label: 'Table Departments' },
-    { path: '/crear_person', icon: <FileText size={18} />, label: 'New Person' },
-    { path: '/tabla_persons', icon: <BookOpen size={18} />, label: 'Table Persons' },
-    { path: '/tabla_usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' },
-    { path: '/crear_usuario', icon: <FileText size={18} />, label: 'Crear Usuario' }
+        { path: '/usuarios/crear', icon: <User size={18} />, label: 'Crear Usuario' },
+    { path: '/usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' }
   ];
 
   return (
