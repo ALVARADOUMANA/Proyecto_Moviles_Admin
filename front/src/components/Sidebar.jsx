@@ -23,7 +23,6 @@ const Sidebar = ({ onToggle }) => {
   const location = useLocation();
   const navigate = useNavigate();
   
-  // Comunica el estado del sidebar al componente padre
   useEffect(() => {
     if (onToggle) {
       onToggle(isOpen);
@@ -41,14 +40,16 @@ const Sidebar = ({ onToggle }) => {
   
   const navItems = [
     { path: '/', icon: <Home size={18} />, label: 'Home' },
-        { path: '/usuarios/crear', icon: <User size={18} />, label: 'Crear Usuario' },
-    { path: '/usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' }
+    { path: '/usuarios/crear', icon: <User size={18} />, label: 'Crear Usuario' },
+    { path: '/usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' },
+    { path: '/especialidades', icon: <BookOpen size={18} />, label: 'Tabla Especialidades' },
+    { path: '/especialidades/crear', icon: <FileText size={18} />, label: 'Crear Especialidades' }
   ];
 
   return (
     <div className={`sidebar ${isOpen ? 'expanded' : 'collapsed'}`} 
          style={{ 
-           backgroundColor: '#1E3A23', 
+           backgroundColor: '#1E3A8A',  // azul oscuro
            height: '100vh',
            position: 'fixed',
            left: 0,
@@ -71,7 +72,7 @@ const Sidebar = ({ onToggle }) => {
               alt="Logo" 
               style={{ height: '30px', marginRight: '10px' }} 
             />
-            <span style={{ fontSize: '1.1rem', fontWeight: '600' }}>Prog. Web</span>
+            <span style={{ fontSize: '1.1rem', fontWeight: '600' }}>SISMED</span>
           </Link>
         ) : (
           <Link 
@@ -113,8 +114,8 @@ const Sidebar = ({ onToggle }) => {
               to={item.path}
               className={`nav-link text-white ${location.pathname === item.path ? 'active' : ''}`}
               style={{ 
-                backgroundColor: location.pathname === item.path ? 'rgba(255,255,255,0.2)' : 'transparent',
-                borderLeft: location.pathname === item.path ? '4px solid white' : 'none',
+                backgroundColor: location.pathname === item.path ? 'rgba(147,197,253,0.3)' : 'transparent', // azul claro translúcido
+                borderLeft: location.pathname === item.path ? '4px solid #93C5FD' : 'none', // azul claro
                 paddingLeft: location.pathname === item.path ? '10px' : '16px',
                 paddingRight: isOpen ? '24px' : '16px',
                 transition: 'all 0.2s',
@@ -127,7 +128,7 @@ const Sidebar = ({ onToggle }) => {
               }}
               onMouseEnter={(e) => {
                 if (location.pathname !== item.path) {
-                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                  e.currentTarget.style.backgroundColor = 'rgba(147,197,253,0.1)'; // azul claro más tenue
                 }
               }}
               onMouseLeave={(e) => {
@@ -164,7 +165,7 @@ const Sidebar = ({ onToggle }) => {
               }}
               onClick={handleLogout}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                e.currentTarget.style.backgroundColor = 'rgba(147,197,253,0.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = 'transparent';
@@ -183,7 +184,7 @@ const Sidebar = ({ onToggle }) => {
       {isOpen && (
         <div className="position-absolute bottom-0 start-0 w-100 text-center text-white-50 py-3 small">
           <hr className="bg-white opacity-25" />
-          Programación Web © 2025
+          SISMED © 2025
         </div>
       )}
     </div>

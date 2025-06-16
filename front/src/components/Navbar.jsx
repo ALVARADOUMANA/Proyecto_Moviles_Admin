@@ -1,12 +1,12 @@
 //front\src\components\Navbar.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Navbar, 
-  Nav, 
+import {
+  Navbar,
+  Nav,
   NavItem
 } from 'reactstrap';
-import { 
+import {
   User,
   Clock,
   Mail,
@@ -62,12 +62,12 @@ const MyNavbar = () => {
     const updateDateTime = () => {
       const now = new Date();
       setCurrentTime(now.toLocaleTimeString('es-ES'));
-      
+
       // Formato de fecha: día de la semana, día de mes de año
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       setCurrentDate(now.toLocaleDateString('es-ES', options));
     };
-    
+
     updateDateTime();
     const interval = setInterval(updateDateTime, 1000);
     return () => clearInterval(interval);
@@ -94,15 +94,17 @@ const MyNavbar = () => {
   }
 
   return (
-    <Navbar 
+    <Navbar
       dark
-      expand="md" 
-      className="py-2 px-4" 
-      style={{ 
-        backgroundColor: '#1E3A23',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
+      expand="md"
+      className="py-2 px-4"
+      style={{
+        backgroundColor: '#003366',  // Azul oscuro
+        boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+        color: 'white'
       }}
     >
+
       <div className="d-flex justify-content-between align-items-center w-100">
         {/* Parte izquierda - Reloj y Fecha */}
         <div className="d-flex flex-column align-items-start text-white">
@@ -124,15 +126,15 @@ const MyNavbar = () => {
           <NavItem className="ms-2 d-flex align-items-center">
             <div ref={dropdownRef} className="position-relative">
               {/* Toggle button */}
-              <div 
+              <div
                 onClick={() => setUserDropdownOpen(!userDropdownOpen)}
                 style={{ cursor: 'pointer' }}
               >
                 <div className="d-flex align-items-center">
-                  <div 
+                  <div
                     className="rounded-circle bg-white text-dark d-flex justify-content-center align-items-center me-2"
-                    style={{ 
-                      width: '40px', 
+                    style={{
+                      width: '40px',
                       height: '40px',
                       boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
                     }}
@@ -151,13 +153,13 @@ const MyNavbar = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Dropdown menu - implementación personalizada */}
               {userDropdownOpen && (
-                <div 
+                <div
                   className="position-absolute bg-white rounded shadow"
-                  style={{ 
-                    minWidth: '280px', 
+                  style={{
+                    minWidth: '280px',
                     padding: '0.5rem 0',
                     marginTop: '0.5rem',
                     zIndex: 1050,
@@ -170,7 +172,7 @@ const MyNavbar = () => {
                   {/* Header del dropdown */}
                   <div className="px-3 py-2 mb-2 border-bottom">
                     <div className="d-flex align-items-center">
-                      <div 
+                      <div
                         className="rounded-circle bg-light d-flex justify-content-center align-items-center me-3"
                         style={{ width: '48px', height: '48px' }}>
                         <span className="fw-bold text-dark">
@@ -200,7 +202,7 @@ const MyNavbar = () => {
                   <div className="border-top pt-2">
                     <button
                       className="btn btn-link text-start w-100 px-3 py-2 text-decoration-none"
-                      style={{ 
+                      style={{
                         color: '#6c757d',
                         borderRadius: '0',
                         transition: 'background-color 0.2s'
@@ -215,10 +217,10 @@ const MyNavbar = () => {
                       <Settings size={16} className="me-2" />
                       Configuración
                     </button>
-                    
+
                     <button
                       className="btn btn-link text-start w-100 px-3 py-2 text-decoration-none text-danger"
-                      style={{ 
+                      style={{
                         borderRadius: '0',
                         transition: 'background-color 0.2s'
                       }}

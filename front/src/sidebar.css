@@ -4,6 +4,8 @@
     overflow-x: hidden;
     white-space: nowrap;
     z-index: 1040;
+    background-color: #1E3A8A; /* azul oscuro */
+    color: white;
   }
   
   /* Estilos para los items del Navbar */
@@ -11,6 +13,8 @@
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 0.5rem;
+    background-color: #3B82F6; /* azul medio */
+    color: white;
   }
   
   .navbar input::placeholder {
@@ -37,20 +41,23 @@
   
   /* Estilos para el sidebar */
   .sidebar .nav-link:focus {
-    color: white !important;
+    color: #93C5FD !important; /* azul claro */
   }
   
   .sidebar .active {
-    color: white !important;
+    color: #93C5FD !important; /* azul claro */
+    font-weight: bold;
   }
   
   .sidebar .nav-link {
     cursor: pointer;
+    color: white;
   }
   
   /* Breadcrumbs personalizados */
   .breadcrumb {
     margin-bottom: 0;
+    color: #1E3A8A; /* azul oscuro */
   }
   
   .breadcrumb-item + .breadcrumb-item::before {
@@ -59,14 +66,16 @@
   
   /* Estilo para el contenido principal */
   .content-wrapper {
-    background-color: #f8f9fa;
+    background-color: white;
+    color: #1E3A8A; /* azul oscuro */
   }
   
   /* Estilo para tarjetas de contenido */
   .content-card {
     background-color: white;
     border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    box-shadow: 0 0.125rem 0.25rem rgba(30, 58, 138, 0.2); /* sombra azul tenue */
     padding: 1.5rem;
     margin-bottom: 1.5rem;
+    color: #1E3A8A;
   }

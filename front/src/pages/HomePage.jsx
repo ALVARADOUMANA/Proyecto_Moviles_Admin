@@ -24,8 +24,8 @@ import {
 
 const HomePage = () => {
   // Color verde musgo para uso consistente
-  const mossGreen = '#3A5F41';
-  const lighterMossGreen = '#E8F0EA';
+  const Blue = '#0000FF';
+  const lighterBlue = '#E8F0EA';
   
   // Estilos comunes para tarjetas
   const cardStyle = {
@@ -43,8 +43,8 @@ const HomePage = () => {
     borderRadius: '20px',
     fontWeight: '500',
     fontSize: '0.8rem',
-    backgroundColor: lighterMossGreen,
-    color: mossGreen
+    backgroundColor: lighterBlue,
+    color: Blue
   };
   
   // Estilo para encabezados
@@ -69,7 +69,7 @@ const HomePage = () => {
 
   // Estilo para iconos en círculos
   const iconContainerStyle = {
-    backgroundColor: lighterMossGreen,
+    backgroundColor: lighterBlue,
     padding: '10px',
     borderRadius: '12px',
     marginRight: '15px'
@@ -82,13 +82,13 @@ const HomePage = () => {
         <Col>
           <h2 style={{fontWeight: '700', color: '#2C3E50'}} className="d-flex align-items-center">
             <span style={{
-              backgroundColor: lighterMossGreen,
+              backgroundColor: lighterBlue,
               padding: '12px',
               borderRadius: '50%',
               marginRight: '15px',
               display: 'inline-flex'
             }}>
-              <BookOpen color={mossGreen} size={28} />
+              <BookOpen color={Blue} size={28} />
             </span>
             FUNDAMENTOS DE PROGRAMACIÓN WEB
             <span style={{...badgeStyle, marginLeft: '15px', fontWeight: '600'}}>EXAMEN</span>
@@ -103,13 +103,13 @@ const HomePage = () => {
             <CardBody>
               <div style={headerStyle} className="d-flex align-items-center">
                 <div style={iconContainerStyle}>
-                  <Info color={mossGreen} size={24} />
+                  <Info color={Blue} size={24} />
                 </div>
                 Detalles del Curso
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <Server size={18} color={mossGreen} className="me-3" />
+                <Server size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Número de Curso</span>
                   <span style={badgeStyle}>428O</span>
@@ -117,7 +117,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <Server size={18} color={mossGreen} className="me-3" />
+                <Server size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">NRC</span>
                   <span style={badgeStyle}>41663</span>
@@ -125,7 +125,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <Calendar size={18} color={mossGreen} className="me-3" />
+                <Calendar size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Periodo</span>
                   <span style={badgeStyle}>CICLO I 2025</span>
@@ -133,7 +133,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <Clock size={18} color={mossGreen} className="me-3" />
+                <Clock size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Horas Crédito</span>
                   <span style={badgeStyle}>3</span>
@@ -141,7 +141,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center">
-                <MapPin size={18} color={mossGreen} className="me-3" />
+                <MapPin size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Campus</span>
                   <span style={badgeStyle}>Sede Interuniversit. Alajuela</span>
@@ -157,7 +157,7 @@ const HomePage = () => {
             <CardBody>
               <div style={headerStyle} className="d-flex align-items-center">
                 <div style={iconContainerStyle}>
-                  <User color={mossGreen} size={24} />
+                  <User color={Blue} size={24} />
                 </div>
                 Información del Estudiante
               </div>
@@ -167,7 +167,7 @@ const HomePage = () => {
                   width: '70px',
                   height: '70px',
                   borderRadius: '12px',
-                  backgroundColor: lighterMossGreen,
+                  backgroundColor: lighterBlue,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -176,20 +176,20 @@ const HomePage = () => {
                   <span style={{ 
                     fontSize: '1.5rem',
                     fontWeight: 'bold',
-                    color: mossGreen
+                    color: Blue
                   }}>PAU</span>
                 </div>
                 <div>
                   <h5 style={{ fontWeight: '600', marginBottom: '5px' }}>Pablo Alvarado Umaña</h5>
                   <div className="d-flex align-items-center mb-1">
-                    <Mail size={14} color={mossGreen} className="me-2" />
+                    <Mail size={14} color={Blue} className="me-2" />
                     <span className="text-muted small">pablo.alvarado.umana@est.una.ac.cr</span>
                   </div>
                 </div>
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <FileText size={18} color={mossGreen} className="me-3" />
+                <FileText size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Carné</span>
                   <span style={badgeStyle}>305470964</span>
@@ -197,7 +197,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center">
-                <Briefcase size={18} color={mossGreen} className="me-3" />
+                <Briefcase size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Carrera</span>
                   <span style={badgeStyle}>Ingeniería en Sistemas</span>
@@ -213,13 +213,13 @@ const HomePage = () => {
             <CardBody>
               <div style={headerStyle} className="d-flex align-items-center">
                 <div style={iconContainerStyle}>
-                  <BookOpen color={mossGreen} size={24} />
+                  <BookOpen color={Blue} size={24} />
                 </div>
                 Detalles Académicos
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <FileText size={18} color={mossGreen} className="me-3" />
+                <FileText size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Escuela</span>
                   <span style={badgeStyle}>Informática y Computación IC</span>
@@ -227,7 +227,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <FileText size={18} color={mossGreen} className="me-3" />
+                <FileText size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">División</span>
                   <span style={badgeStyle}>Facult. de Exactas y Naturales EN</span>
@@ -235,7 +235,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <FileText size={18} color={mossGreen} className="me-3" />
+                <FileText size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Modo de Calificar</span>
                   <span style={badgeStyle}>Calificación estándar</span>
@@ -243,7 +243,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center">
-                <FileText size={18} color={mossGreen} className="me-3" />
+                <FileText size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Atributo</span>
                   <span style={badgeStyle}>Optativo disciplinario</span>
@@ -259,13 +259,13 @@ const HomePage = () => {
             <CardBody>
               <div style={headerStyle} className="d-flex align-items-center">
                 <div style={iconContainerStyle}>
-                  <Clock color={mossGreen} size={24} />
+                  <Clock color={Blue} size={24} />
                 </div>
                 Información de Horario
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <Users size={18} color={mossGreen} className="me-3" />
+                <Users size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Instructor</span>
                   <span style={badgeStyle}>RAMOS PEÑARANDA, JUAN</span>
@@ -273,7 +273,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <Calendar size={18} color={mossGreen} className="me-3" />
+                <Calendar size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Período Fechas</span>
                   <span style={badgeStyle}>17/02/2025 - 21/06/2025</span>
@@ -281,7 +281,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center mb-3">
-                <Clock size={18} color={mossGreen} className="me-3" />
+                <Clock size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Horario</span>
                   <span style={badgeStyle}>Viernes 17:00 - 20:20</span>
@@ -289,7 +289,7 @@ const HomePage = () => {
               </div>
               
               <div className="d-flex align-items-center">
-                <Monitor size={18} color={mossGreen} className="me-3" />
+                <Monitor size={18} color={Blue} className="me-3" />
                 <div className="d-flex justify-content-between w-100">
                   <span className="text-muted">Método Educativo</span>
                   <span style={badgeStyle}>Presencial</span>

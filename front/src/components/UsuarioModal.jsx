@@ -15,7 +15,7 @@ const UsuarioModal = ({ isOpen, onClose, mode, usuario, onDelete, colors }) => {
   const [loading, setLoading] = useState(false);
 
   // Estilos
-  const mossGreen = '#556B2F';
+  const Blue = '#0000FF';
   const iconSize = 24;
   const labelStyle = {
     fontSize: '0.9rem',
@@ -81,7 +81,7 @@ const UsuarioModal = ({ isOpen, onClose, mode, usuario, onDelete, colors }) => {
               <Card className="border-0 shadow-sm mb-4">
                 <CardBody>
                   <div className="d-flex align-items-center mb-4">
-                    <Database size={iconSize} className="me-3" style={{color: mossGreen}} />
+                    <Database size={iconSize} className="me-3" style={{color: Blue}} />
                     <div>
                       <h6 style={labelStyle}>ID {isMedico ? 'Médico' : 'Paciente'}</h6>
                       <p style={valueStyle} className="mb-0">
@@ -91,7 +91,7 @@ const UsuarioModal = ({ isOpen, onClose, mode, usuario, onDelete, colors }) => {
                   </div>
 
                   <div className="d-flex align-items-center mb-4">
-                    <User size={iconSize} className="me-3" style={{color: mossGreen}} />
+                    <User size={iconSize} className="me-3" style={{color: Blue}} />
                     <div>
                       <h6 style={labelStyle}>Información Básica</h6>
                       <div className="row">
@@ -114,7 +114,7 @@ const UsuarioModal = ({ isOpen, onClose, mode, usuario, onDelete, colors }) => {
                   </div>
 
                   <div className="d-flex align-items-center mb-4">
-                    <Calendar size={iconSize} className="me-3" style={{color: mossGreen}} />
+                    <Calendar size={iconSize} className="me-3" style={{color: Blue}} />
                     <div>
                       <h6 style={labelStyle}>Fecha de Nacimiento</h6>
                       <p style={valueStyle} className="mb-0">
@@ -125,9 +125,9 @@ const UsuarioModal = ({ isOpen, onClose, mode, usuario, onDelete, colors }) => {
 
                   <div className="d-flex align-items-center mb-4">
                     {isMedico ? (
-                      <PlusCircle  size={iconSize} className="me-3" style={{color: mossGreen}} />
+                      <PlusCircle  size={iconSize} className="me-3" style={{color: Blue}} />
                     ) : (
-                      <Droplet size={iconSize} className="me-3" style={{color: mossGreen}} />
+                      <Droplet size={iconSize} className="me-3" style={{color: Blue}} />
                     )}
                     <div>
                       <h6 style={labelStyle}>
@@ -457,7 +457,7 @@ const UsuarioModal = ({ isOpen, onClose, mode, usuario, onDelete, colors }) => {
       <ModalHeader 
         toggle={onClose} 
         style={{
-          backgroundColor: mossGreen,
+          backgroundColor: Blue,
           color: 'white',
           borderBottom: 'none'
         }}

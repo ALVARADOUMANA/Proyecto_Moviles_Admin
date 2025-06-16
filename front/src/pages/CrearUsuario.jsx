@@ -6,14 +6,15 @@ import { ToastNotification } from '../components/ToastNotification';
 import PasosRegistro from '../components/PasosRegistro';
 
 const COLORS = {
-  primary: '#3a5a40',
-  secondary: '#588157',
-  success: '#386641',
-  danger: '#bc4749',
-  warning: '#dda15e',
-  light: '#f4f4f4',
-  dark: '#283618',
+  primary: '#1E3A8A',   // azul oscuro (azul Dodger oscuro)
+  secondary: '#3B82F6', // azul medio (azul claro brillante)
+  success: '#2563EB',   // azul más vibrante
+  danger: '#2563EB',    // para "danger" también azul (podemos dejarlo azul, o un azul rojizo, pero como querés azul y blanco, pongo azul)
+  warning: '#93C5FD',   // azul muy claro (azul bebé)
+  light: '#FFFFFF',     // blanco
+  dark: '#1E40AF',      // azul más oscuro
 };
+
 
 const CrearUsuario = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const CrearUsuario = () => {
   const handleRegistroCompletado = () => {
     // Redirigir a la tabla de usuarios después de 1.5 segundos
     setTimeout(() => {
-      navigate('/tabla_usuarios');
+      navigate('/usuarios/crear');
     }, 1500);
   };
 
