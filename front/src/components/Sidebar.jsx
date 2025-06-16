@@ -44,7 +44,8 @@ const Sidebar = ({ onToggle }) => {
     { path: '/tabla_departments', icon: <BookOpen size={18} />, label: 'Table Departments' },
     { path: '/crear_person', icon: <FileText size={18} />, label: 'New Person' },
     { path: '/tabla_persons', icon: <BookOpen size={18} />, label: 'Table Persons' },
-    { path: '/tabla_usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' }
+    { path: '/tabla_usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' },
+    { path: '/crear_usuario', icon: <FileText size={18} />, label: 'Crear Usuario' }
   ];
 
   return (

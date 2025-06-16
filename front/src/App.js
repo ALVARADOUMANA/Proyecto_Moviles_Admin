@@ -14,6 +14,7 @@ import Login from './pages/auth/Login';
 import { Container } from 'reactstrap';
 import { isAuthenticated } from './hooks/useAuth';
 import TablaUsuarios from './pages/TablaUsuarios';
+import CrearUsuario from './pages/CrearUsuario';
 
 
 // Componente interno que maneja las rutas y tiene acceso a useLocation
@@ -165,6 +166,15 @@ const AppContent = () => {
         element={
           <ProtectedRouteWithLayout>
             <TablaUsuarios />
+          </ProtectedRouteWithLayout>
+        }
+      />
+
+      <Route
+        path="/crear_usuario"
+        element={
+          <ProtectedRouteWithLayout>
+            <CrearUsuario />
           </ProtectedRouteWithLayout>
         }
       />
