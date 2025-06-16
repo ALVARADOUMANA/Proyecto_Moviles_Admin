@@ -79,24 +79,11 @@ api.interceptors.response.use(
 );
 
 // APIs para Department
-export const obtenerDepartments = () => api.get('/api/Department');
-export const obtenerDepartmentPorId = (id) => api.get(`/api/Department/${id}`);
-export const crearDepartment = (data) => api.post('/api/Department', data);
-export const actualizarDepartment = (data) => api.put('/api/Department', data);
-export const eliminarDepartment = (id) => api.delete(`/api/Department/${id}`);
-
-// APIs para Person
-export const obtenerPersons = () => api.get('/api/Person');
-export const obtenerPersonPorId = (id) => api.get(`/api/Person/${id}`);
-export const crearPerson = (data) => api.post('/api/Person', data);
-export const actualizarPerson = (data) => api.put('/api/Person', data);
-export const eliminarPerson = (id) => api.delete(`/api/Person/${id}`);
-
 
 export const SignUpCode = () => api.post('api/SignUp/OTP');
 
 export const insertarPaciente = () => api.post('api/Paciente/Insertar');
-export const insertarMedico = () => api.post('api/Medico/CrearMedico');
+export const insertarMedico = () => api.post('api/Medico/CrearMedicoPorAdmin');
 
 export const ObtenerPacientes = () => api.get('api/Paciente/ObtenerPacientes');
 export const ObtenerMedicos = () => api.get('api/Medico/ObtenerMedicos');
@@ -126,42 +113,6 @@ export const isUserAuthenticated = () => {
   }
   
   return true;
-};
-
-// Wrapper functions con verificación de autenticación (opcional)
-export const obtenerDepartmentsSafe = async () => {
-  if (!isUserAuthenticated()) {
-    throw new Error('Usuario no autenticado');
-  }
-  return obtenerDepartments();
-};
-
-export const obtenerDepartmentPorIdSafe = async (id) => {
-  if (!isUserAuthenticated()) {
-    throw new Error('Usuario no autenticado');
-  }
-  return obtenerDepartmentPorId(id);
-};
-
-export const crearDepartmentSafe = async (data) => {
-  if (!isUserAuthenticated()) {
-    throw new Error('Usuario no autenticado');
-  }
-  return crearDepartment(data);
-};
-
-export const actualizarDepartmentSafe = async (data) => {
-  if (!isUserAuthenticated()) {
-    throw new Error('Usuario no autenticado');
-  }
-  return actualizarDepartment(data);
-};
-
-export const eliminarDepartmentSafe = async (id) => {
-  if (!isUserAuthenticated()) {
-    throw new Error('Usuario no autenticado');
-  }
-  return eliminarDepartment(id);
 };
 
 // Exportar la instancia para su uso en otros módulos

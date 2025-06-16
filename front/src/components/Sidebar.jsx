@@ -41,9 +41,7 @@ const Sidebar = ({ onToggle }) => {
   const navItems = [
     { path: '/', icon: <Home size={18} />, label: 'Home' },
     { path: '/usuarios/crear', icon: <User size={18} />, label: 'Crear Usuario' },
-    { path: '/usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' },
-    { path: '/especialidades', icon: <BookOpen size={18} />, label: 'Tabla Especialidades' },
-    { path: '/especialidades/crear', icon: <FileText size={18} />, label: 'Crear Especialidades' }
+    { path: '/usuarios', icon: <FileText size={18} />, label: 'Tabla Usuarios' }
   ];
 
   return (
