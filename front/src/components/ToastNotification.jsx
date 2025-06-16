@@ -1,5 +1,3 @@
-//
-
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,14 +6,14 @@ import 'react-toastify/dist/ReactToastify.css';
 const ToastNotification = ({
   position = "top-right",
   autoClose = 3000,
-  hideProgressBar = false, // Mantenemos la barra de progreso visible
+  hideProgressBar = false,
   newestOnTop = true,
   closeOnClick = true,
   rtl = false,
   pauseOnFocusLoss = true,
   draggable = true,
   pauseOnHover = true,
-  theme = "light" // Changed to light theme for minimalist look
+  theme = "light"
 }) => {
   return (
     <ToastContainer
@@ -29,40 +27,40 @@ const ToastNotification = ({
       draggable={draggable}
       pauseOnHover={pauseOnHover}
       theme={theme}
-      toastClassName="modern-toast" // Custom class for styling
+      toastClassName="modern-toast"
     />
   );
 };
 
-// Modern minimalist color palette with white and moss green
+// Updated color palette with blue colors
 const TOAST_COLORS = {
   success: {
     backgroundColor: '#ffffff',
-    borderLeft: '4px solid #5a7d60', // Moss green border
-    textColor: '#2c3e33', // Dark moss green text
+    borderLeft: '4px solid #2563EB', // Blue border
+    textColor: '#1E3A8A', // Dark blue text
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
   },
   error: {
     backgroundColor: '#ffffff',
-    borderLeft: '4px solid #d64545',
-    textColor: '#6d2323',
+    borderLeft: '4px solid #DC2626', // Red border
+    textColor: '#7F1D1D', // Dark red text
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
   },
   warning: {
     backgroundColor: '#ffffff',
-    borderLeft: '4px solid #e9b949',
-    textColor: '#66501e',
+    borderLeft: '4px solid #D97706', // Amber border
+    textColor: '#78350F', // Dark amber text
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
   },
   info: {
     backgroundColor: '#ffffff',
-    borderLeft: '4px solid #3d6a58', // Darker moss green
-    textColor: '#2c3e33',
+    borderLeft: '4px solid #1D4ED8', // Darker blue
+    textColor: '#1E3A8A',
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
   }
 };
 
-// Custom CSS to be imported separately
+// Custom CSS with blue color scheme
 const toastCSS = `
   .modern-toast {
     border-radius: 6px !important;
@@ -72,13 +70,13 @@ const toastCSS = `
   }
   
   .Toastify__close-button {
-    color: #5a7d60 !important;
+    color: #2563EB !important;
     opacity: 0.7;
   }
   
   .Toastify__progress-bar {
     height: 3px !important;
-    background: linear-gradient(to right, #5a7d60, #3d6a58) !important;
+    background: linear-gradient(to right, #2563EB, #1D4ED8) !important;
     opacity: 0.7;
   }
   
@@ -87,7 +85,7 @@ const toastCSS = `
   }
 `;
 
-// Functions to display different types of toasts
+// Toast functions with blue color scheme
 const showToast = {
   success: (message, options = {}) => {
     return toast.success(message, {
@@ -140,14 +138,6 @@ const showToast = {
   }
 };
 
-// Asegurarse de que la barra de progreso se muestre correctamente
-const customProgressBarStyles = {
-  success: '#5a7d60',
-  error: '#d64545',
-  warning: '#e9b949',
-  info: '#3d6a58'
-};
-
 // Add style tag to document head
 const injectStyle = () => {
   const styleEl = document.createElement('style');
@@ -155,8 +145,5 @@ const injectStyle = () => {
   styleEl.appendChild(document.createTextNode(toastCSS));
   document.head.appendChild(styleEl);
 };
-
-// Call this function when your app initializes
-// injectStyle();
 
 export { ToastNotification, showToast, injectStyle };

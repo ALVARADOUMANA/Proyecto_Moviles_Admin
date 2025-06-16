@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // URL base para la API de autenticación
-const AUTH_API_URL = 'https://localhost:44388/api/auth';
+const AUTH_API_URL = 'https://jmvserver.mooo.com/backend_sismed/api/auth';
 
 // Configuración base de axios para autenticación
 const authConfig = {
@@ -71,7 +71,7 @@ authApi.interceptors.response.use(
   }
 );
 
-// Función para iniciar sesión
+// Función para iniciar sesión (solo para administradores)
 export const loginUser = async (credentials) => {
   try {
     const response = await authApi.post('/login', {
@@ -80,6 +80,11 @@ export const loginUser = async (credentials) => {
     });
     
     if (response.data.resultado) {
+      // Verificar si el usuario es administrador
+      if (response.data.Usuario.NombreRol !== 'Administrador') {
+        throw new Error('Acceso restringido: solo para administradores');
+      }
+      
       // Guardar datos de autenticación
       localStorage.setItem('token', response.data.AccessToken);
       localStorage.setItem('tokenExpiration', response.data.AccessTokenExpira);
@@ -112,10 +117,11 @@ export const logout = () => {
   localStorage.removeItem('userId');
 };
 
-// Función para verificar si el usuario está autenticado
+// Función para verificar si el usuario está autenticado y es administrador
 export const isAuthenticated = () => {
   const token = localStorage.getItem('token');
   const tokenExpiration = localStorage.getItem('tokenExpiration');
+  const userRoles = JSON.parse(localStorage.getItem('userRoles') || '[]');
   
   if (!token || !tokenExpiration) {
     return false;
@@ -130,10 +136,16 @@ export const isAuthenticated = () => {
     return false;
   }
   
+  // Verificar si el usuario tiene rol de administrador
+  if (!userRoles.includes('Administrador')) {
+    logout(); // Limpiar datos si no es administrador
+    return false;
+  }
+  
   return true;
 };
 
-// Función para obtener el nombre de usuario actual
+// Función para obtener el nombre de usuario actual (solo si es administrador)
 export const getCurrentUser = () => {
   if (!isAuthenticated()) {
     return null;

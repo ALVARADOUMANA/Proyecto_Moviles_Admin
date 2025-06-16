@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  Form, FormGroup, Label, Input, Button, Row, Col, Spinner, 
-  Card, CardHeader, CardBody, Alert, Container 
+import {
+  Form, FormGroup, Label, Input, Button, Row, Col, Spinner,
+  Card, CardHeader, CardBody, Alert, Container
 } from 'reactstrap';
-import { 
-  User, CreditCard, Calendar, Info, Award, Book, 
+import {
+  User, CreditCard, Calendar, Info, Award, Book,
   Phone, MapPin, ArrowLeft, Save, Home, AlertCircle
 } from 'react-feather';
 import { insertarMedico } from '../hooks/useApi';
@@ -64,8 +64,8 @@ const FormularioMedico = () => {
   const validateForm = () => {
     const newErrors = {};
     const requiredFields = [
-      'CorreoElectronico', 'NumeroIdentificacion', 'Nombre', 
-      'PrimerApellido', 'FechaNacimiento', 'Genero', 
+      'CorreoElectronico', 'NumeroIdentificacion', 'Nombre',
+      'PrimerApellido', 'FechaNacimiento', 'Genero',
       'Telefono', 'Provincia', 'Canton', 'Distrito',
       'NumeroLicencia', 'AnnosExperiencia'
     ];
@@ -113,8 +113,9 @@ const FormularioMedico = () => {
         showToast.success('Médico registrado exitosamente');
         // Redirigir después de 1.5 segundos
         setTimeout(() => {
-          navigate('/usuarios/crear');
+          navigate('/usuarios');
         }, 1500);
+
       } else {
         setError(response.data.error || 'Error al registrar el médico');
       }
@@ -132,9 +133,9 @@ const FormularioMedico = () => {
       <Row className="mb-4 align-items-center">
         <Col>
           <div className="d-flex align-items-center">
-            <Home 
-              size={24} 
-              className="me-2 cursor-pointer" 
+            <Home
+              size={24}
+              className="me-2 cursor-pointer"
               style={{ color: COLORS.primary }}
               onClick={() => navigate('/')}
             />

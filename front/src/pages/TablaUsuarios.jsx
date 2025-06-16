@@ -135,7 +135,7 @@ const TablaUsuarios = () => {
           </div>
         </Col>
         <Col xs="auto">
-          <Link to="/crear_usuario" style={{ textDecoration: 'none' }}>
+          <Link to="/usuarios/crear" style={{ textDecoration: 'none' }}>
             <Button
               color="primary"
               className="d-flex align-items-center"

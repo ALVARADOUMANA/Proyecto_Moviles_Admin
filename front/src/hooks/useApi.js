@@ -80,11 +80,7 @@ api.interceptors.response.use(
 
 // APIs para Department
 
-export const SignUpCode = () => api.post('api/SignUp/OTP');
-
-export const insertarPaciente = () => api.post('api/Paciente/Insertar');
-export const insertarMedico = () => api.post('api/Medico/CrearMedicoPorAdmin');
-
+export const insertarMedico = (medicoData) => api.post('api/Medico/CrearMedicoPorAdmin', medicoData);
 export const ObtenerPacientes = () => api.get('api/Paciente/ObtenerPacientes');
 export const ObtenerMedicos = () => api.get('api/Medico/ObtenerMedicos');
 
