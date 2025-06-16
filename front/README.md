@@ -1,0 +1,9 @@
+/src
+  /components
+    Navbar.jsx
+  /pages
+    HomePage.jsx
+    AboutPage.jsx
+    ServicesPage.jsx
+  App.jsx
+  index.js

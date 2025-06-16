@@ -1,0 +1,72 @@
+/* src/sidebar.css */
+/* Estilos del Sidebar */
+.sidebar {
+    overflow-x: hidden;
+    white-space: nowrap;
+    z-index: 1040;
+  }
+  
+  /* Estilos para los items del Navbar */
+  .dropdown-menu {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 0.5rem;
+  }
+  
+  .navbar input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .navbar input:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    box-shadow: none;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .sidebar.expanded {
+      width: 100% !important;
+    }
+    
+    .content-wrapper {
+      margin-left: 0 !important;
+      width: 100% !important;
+    }
+  }
+  
+  /* Estilos para el sidebar */
+  .sidebar .nav-link:focus {
+    color: white !important;
+  }
+  
+  .sidebar .active {
+    color: white !important;
+  }
+  
+  .sidebar .nav-link {
+    cursor: pointer;
+  }
+  
+  /* Breadcrumbs personalizados */
+  .breadcrumb {
+    margin-bottom: 0;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: none !important;
+  }
+  
+  /* Estilo para el contenido principal */
+  .content-wrapper {
+    background-color: #f8f9fa;
+  }
+  
+  /* Estilo para tarjetas de contenido */
+  .content-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
